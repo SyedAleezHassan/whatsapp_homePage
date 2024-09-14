@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice_project/ItemsPage.dart';
+import 'package:practice_project/whatsapp.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WhatsAppHomePage(),
+      home: cartView(),
     );
   }
 }
@@ -22,7 +24,7 @@ class WhatsAppHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, // Number of tabs (Chats and Status)
+      length: 3, // Number of tabs (Chats and Status)
       child: Scaffold(
         appBar: AppBar(
           title: Text('WhatsApp'),
@@ -45,6 +47,7 @@ class WhatsAppHomePage extends StatelessWidget {
             tabs: [
               Tab(text: 'CHATS'),
               Tab(text: 'STATUS'),
+              Tab(text: 'GROUPS'),
             ],
           ),
         ),
@@ -81,6 +84,22 @@ class WhatsAppHomePage extends StatelessWidget {
                   ),
                   title: Text('Status $index'),
                   subtitle: Text('Status description $index'),
+                  onTap: () {
+                    // Implement status page navigation
+                  },
+                );
+              },
+            ),
+            ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.grey,
+                    child: Icon(Icons.person),
+                  ),
+                  title: Text('Group $index'),
+                  subtitle: Text('group description $index'),
                   onTap: () {
                     // Implement status page navigation
                   },
