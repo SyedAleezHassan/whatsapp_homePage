@@ -5,7 +5,8 @@ List cartList = [
   {'name': 'Biryani', 'price': 230},
   {'name': 'Burger', 'price': 230},
   {'name': 'Pizza', 'price': 230},
-   {'name': 'Tikka', 'price': 930}
+   {'name': 'Tikka', 'price': 930},
+   {'name': 'Karahi', 'price': 2000}
 ];
 List<Map> addedItems = [];
 
