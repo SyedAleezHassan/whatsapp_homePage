@@ -12,15 +12,11 @@ class _addedState extends State<added> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body:
-      widget.cart_ka_maal.isEmpty?
-      Center(child: const CircularProgressIndicator(),):
-       ListView.builder(
+      body: ListView.builder(
           itemCount: widget.cart_ka_maal.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(widget.cart_ka_maal[index]['price'].toString()),
+              title: Text(widget.cart_ka_maal[index]['name']),
             );
           }),
     );
